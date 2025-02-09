@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            background: pink;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+            grid-template-rows: repeat(auto-fill, minmax(33.33%, 1fr));
+            gap: 0;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            background: red;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: darkred;
+        }
+
+        #message, #additionalMessage {
+            display: none;
+            color: white;
+            text-align: center;
+        }
+
+        #message {
+            font-size: 50px;
+            margin-top: 20px;
+        }
+
+        #additionalMessage {
+            font-size: 18px;
+            margin-top: 10px;
+            max-width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="background" id="background">
+        <img src="https://iili.io/2bu8eeI.md.jpg" alt="Image 1">
+        <img src="https://i.postimg.cc/fyDjP2tV/Whats-App-Image-2025-02-09-at-22-26-47-2e97c90e.jpg" alt="Image 2">
+        <img src="https://iili.io/2bubMhJ.md.jpg" alt="Image 3">
+        <img src="https://iili.io/2bA1uB1.md.webp" alt="Image 4">
+        <img src="https://iili.io/2bAMg4t.md.jpg" alt="Image 5">
+        <img src="https://iili.io/2bAjd0B.md.jpg" alt="Image 6">
+        <img src="https://i.postimg.cc/vBm5LF5Z/IMG20230210151053.jpg" alt="Image 7">
+        <img src="https://i.postimg.cc/nLh2Fw0B/Screenshot-2022-10-01-00-50-16-25-6012fa4d4ddec268fc5c7112cbb265e7.jpg" alt="Image 8">
+        <img src="https://i.postimg.cc/9XDWRmrN/Whats-App-Image-2025-02-09-at-22-19-52-e61eb8a8.jpg" alt="Image 9">
+        <img src="https://i.postimg.cc/Vk81VX43/Whats-App-Image-2025-02-09-at-22-19-52-c161f65e.jpg" alt="Image 10">
+        <img src="https://i.postimg.cc/zfDNJ5s7/Whats-App-Image-2025-02-09-at-22-19-52-aac34b04.jpg" alt="Image 11">
+        <img src="https://i.postimg.cc/g04ZJzn2/Whats-App-Image-2025-02-09-at-22-26-46-d56feaf8.jpg" alt="Image 12">
+    </div>
+
+    <button id="clickButton" onclick="handleClick()">Click Me</button>
+    <div id="message">Happyyyyyy Birthday SONI 🎉❤️</div>
+    <div id="additionalMessage">Okay SONI, Happy Birthday! 🎉🎂 Today is all about YOU because you are a priority, not just today, but always! Hope you stay happy and have an amazing day. Keep smiling, SONI! ❤️</div>
+
+    <script>
+        function handleClick() {
+            document.getElementById('message').style.display = 'block';
+            document.getElementById('additionalMessage').style.display = 'block';
+            document.getElementById('background').style.opacity = "1";
+            document.getElementById('clickButton').style.display = "none";
+        }
+    </script>
+</body>
+</html>
